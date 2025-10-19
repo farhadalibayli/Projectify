@@ -1,0 +1,143 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+  color: #333;
+}
+
+/* ===== Container ===== */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ===== Header ===== */
+.hero {
+  margin-top: 2.5rem; /* moved a bit up */
+  animation: fadeInDown 1s ease;
+}
+
+.title {
+  font-size: 4.5rem; /* slightly bigger */
+  font-weight: 800;
+  background: linear-gradient(to right, #7b1fa2, #0097a7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.5px;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* ===== Options ===== */
+.options-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem; /* slightly bigger gap */
+  flex-wrap: wrap;
+  margin-top: 2rem; /* moved higher */
+  animation: fadeInUp 1s ease;
+}
+
+.option-card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 24px; /* bigger border-radius */
+  padding: 3rem 3.5rem; /* bigger padding */
+  width: 320px; /* bigger card */
+  height: 320px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.option-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.option-card.selected {
+  transform: scale(1.1); /* slightly bigger */
+  border: 2px solid #7b1fa2;
+  box-shadow: 0 0 28px rgba(123, 31, 162, 0.35);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.icon-wrapper {
+  font-size: 4rem; /* bigger icon */
+  margin-bottom: 1.2rem;
+}
+
+.option-card h2 {
+  font-size: 1.8rem; /* bigger text */
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.option-card p {
+  font-size: 1.1rem; /* slightly bigger */
+  color: #555;
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-bottom: 2.5rem;
+}
+
+.next-btn {
+  border: none;
+  font-size: 1.3rem;
+  padding: 1rem 2.5rem; /* slightly bigger */
+  border-radius: 45px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.next-btn.inactive {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.next-btn.active {
+  background: linear-gradient(to right, #0097a7, #7b1fa2);
+  color: #fff;
+  box-shadow: 0 0 18px rgba(123, 31, 162, 0.35);
+}
+
+.next-btn.active:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 28px rgba(123, 31, 162, 0.55);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
